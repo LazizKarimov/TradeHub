@@ -9,5 +9,5 @@ public class TradeHubApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TradeHubApplication.class, args);
 	}
-
+	
 }
