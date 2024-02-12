@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "images")
@@ -26,10 +25,10 @@ public class Image {
     private String contentType;
     @Column(name = "isPreviewImage")
     private boolean isPreviewImage;
-//    @Lob
+    //    @Lob
     @Column(name = "bytes")
     @Basic(fetch = FetchType.LAZY)
-    private byte[] bytes;  // данная переменная в бд будет хранится
+    private byte[] bytes;
 
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     private Product product;
